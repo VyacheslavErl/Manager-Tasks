@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Title
+{% endblock %}
+
+{% block content %}
+<div id="calendar">
+<div class="calendar-content-calendar">
+    <div class="calendar-content-top">
+        <p class="calendar-content-top-date">September 2023</p>
+        <div class="calendar-content-top-swith">
+            <a id="prevMonthButton" href="/tasks/calendar/{{ month|add:-1 }}"><</a>
+            <a id="nextMonthButton" href="/tasks/calendar/{{ month|add:1 }}">></a>
+        </div>
+    </div>
+    <div class="calebdar-content-table">
+        <table>
+            <tr class="calendar-table-dow"><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th><th class="sun">Sun</th></tr>
+            <tr><td class="noday">0</td><td class="noday">0</td><td class="noday">0</td><td class="noday">0</td><td class="fri"><a href="4">1</a></td><td class="sat"><a href="5">2</a></td><td class="sun"><a href="6">3</a></td></tr>
+            <tr><td class="mon"><a href="0">4</a></td><td class="tue"><a href="1">5</a></td><td class="wed"><a href="2">6</a></td><td class="thu"><a href="3">7</a></td><td class="fri"><a href="4">8</a></td><td class="sat"><a href="5">9</a></td><td class="sun"><a href="6">10</a></td></tr>
+            <tr><td class="mon"><a href="0">11</a></td><td class="tue"><a href="1">12</a></td><td class="wed"><a href="2">13</a></td><td class="thu"><a href="3">14</a></td><td class="fri"><a href="4">15</a></td><td class="sat"><a href="5">16</a></td><td class="sun"><a href="6">17</a></td></tr>
+            <tr><td class="mon"><a href="0">18</a></td><td class="tue"><a href="1">19</a></td><td class="wed"><a href="2">20</a></td><td class="thu"><a href="3">21</a></td><td class="fri"><a href="4">22</a></td><td class="sat"><a href="5">23</a></td><td class="sun"><a href="6">24</a></td></tr>
+            <tr><td class="mon"><a href="0">25</a></td><td class="tue"><a href="1">26</a></td><td class="wed"><a href="2">27</a></td><td class="thu"><a href="3">28</a></td><td class="fri"><a href="4">29</a></td><td class="sat"><a href="5">30</a></td><td class="noday">0</td></tr>
+        </table>
+    </div>
+</div>
+    <ul class="calendar-content-list">
+        <li class="calendar-content-list-task">
+            <a>
+                <div class="calendar-content-list-task-date">23.09</div>
+                <div class="calendar-content-list-task-slash">|</div>
+                <div class="calendar-content-list-task-name">vú Aptö</div>
+            </a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

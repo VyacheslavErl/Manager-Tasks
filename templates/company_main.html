@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Manager Task
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated and user.company %}
+    <p> {{ user.company.name }} </p>
+    <p> {{ user.company.description }} </p>
+{% elif  user.is_authenticated %}
+    <p>Вы не состоите в компании</p>
+        <span>Также вы можете создать <a href="/companies/create">свою компанию</a></span>
+{% else %}
+    <p>Чтобы видеть информацию о компании, <a href="/">войдите в аккаунт</a>.</p>
+{% endif %}
+{% endblock %}
