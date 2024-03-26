@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from users.models import UserModel
 
+
 def companies_main(request):
     return render(request, 'company_main.html')
 

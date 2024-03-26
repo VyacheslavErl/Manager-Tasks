@@ -7,17 +7,19 @@ from tasks.forms import TaskForm, CommentForm
 
 import calendar
 
+
 def tasks_list(request):
     return render(request, 'tasks_list.html',
                   {'tasks': TaskModel.objects.all()})
+
 
 def add_task(request):
     if request.method == "POST":
         form = TaskForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save(commit=False)
-            #form.by_user = "admin"
-           # form.company = request.user.company
+            form.user = request.user
+            form.company = request.user.company
             form.save()
             return redirect('/tasks')
     else:
