@@ -1,0 +1,33 @@
+.modal .modal-window form .fields #image-container {
+  display: none;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  border: dashed 3px #FFF;
+}
+
+#main-page .content .content-description .item .image {
+  width: 900px;
+  height: 500px;
+}
+
+.modal .modal-window form .fields .image {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  background: #ffffff;
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.modal .modal-window form .fields #image-container:hover {
+  border: dashed 3px #4654EB;
+}

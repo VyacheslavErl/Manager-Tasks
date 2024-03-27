@@ -1,0 +1,103 @@
+*{
+  font-family: "Calibri";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+#add-task .name input, #add-task .name textarea, #add-task .text input, #add-task .text textarea, #add-task .date input, #add-task .date textarea, #add-task .submit-btn input, #add-task .submit-btn textarea {
+  font-size: 1.4375em;
+}
+#add-task .image-input .image label div {
+  font-size: 3rem;
+  color: #000000;
+}
+#add-task .alert  {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #8a272a;
+}
+#task-info .task-info-top  {
+  font-size: 18px;
+}
+#task-info .task-info-middle .task-info-text  {
+  font-size: 18px;
+}
+#task-info .task-info-middle .task-info-do-before {
+  font-size: 18px;
+}
+#profile .profile-content .profile-card .profile-card-top .profile-card-username {
+  font-size: 1.5625em;
+}
+#profile .profile-content .profile-card a {
+  font-size: 1.5625em;
+}
+#profile .profile-content .profile-info {
+  font-size: 1.125em;
+}
+#content .page-title {
+    font-size: 2.25em;
+  }
+  #task-info .task-info-comments .comment .comment-text {
+    font-size: 18px;
+  }
+  #task-info .task-info-comments .comment .comment-user-name {
+    font-size: 18px;
+  }
+  #task-info .task-info-comments .comment .comment-created-at {
+    color: #686868;
+  }
+  #profile .profile-content .profile-info .profile-info-top .profile-info-top-name .profile-info-name {
+    font-size: 1.5625em;
+  }
+
+  #profile .profile-logout span {
+    color: #8A272A;
+    font-size: 25px;
+  }
+  ::-webkit-input-placeholder {
+    -color: #686868;
+  }
+  
+  ::-moz-placeholder {
+   color: #686868;
+  }
+  
+  :-ms-input-placeholder {
+  color: #686868;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #686868;
+  }
+  
+  ::placeholder {
+    color: #686868;
+  }
+  #profile .profile-content .profile-info .profile-info-top .profile-info-company:hover {
+    color: #4654EB;
+  }
+
+  #calendar .calendar-content-list-task:hover a .calendar-content-list-task-date, #calendar .calendar-content-list-task:hover a .calendar-content-list-task-slash, #calendar .calendar-content-list-task:hover a .calendar-content-list-task-name {
+    color: #4654EB;
+  }
+
+  @media screen and (min-width: 1147px) and (max-width: 1691px) {
+    .profile-card {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: landscape) {
+
+
+    #navigation #navbar li button {
+      font-size: 1rem;
+    }
+
+  }
+  @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: portrait) {
+
+    #navigation #navbar li button {
+      font-size: 1rem;
+    }
+  }

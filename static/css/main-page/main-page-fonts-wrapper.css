@@ -1,0 +1,36 @@
+#main-page .hero .hero-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 2rem;
+  }
+
+
+
+  #main-page .hero .hero-title .hero-title-image .slogan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 358px;
+    height: 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    position: absolute;
+    padding: 10px;
+    z-index: 1;
+  }
+

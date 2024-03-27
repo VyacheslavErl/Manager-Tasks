@@ -1,0 +1,39 @@
+#task-list .task .task-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #add-task .image-input .image {
+    background: #ffffff;
+    border-radius: 18px;
+    width: 106px;
+    height: 106px;
+    font-size: 4rem;
+  }
+  #profile .profile-content .profile-info .profile-info-top .profile-info-top-name .profile-info-image {
+    display: none;
+  }
+  @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: landscape) {
+    .profile-info-image {
+      display: inline-block !important;
+      width: 45px;
+      height: 45px;
+    }
+  }  
+
+  @media only screen and (min-width: 1147px) and (max-width: 1468px) {
+    .profile-card-image {
+      width: 6.75rem !important;
+      height: 6.75rem !important;
+    }
+  }
+  @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: portrait) {
+    .profile-info-image {
+      display: inline-block !important;
+      width: 45px;
+      height: 45px;
+    }
+  }

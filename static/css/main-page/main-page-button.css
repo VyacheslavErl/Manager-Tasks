@@ -1,0 +1,126 @@
+#main-page .hero .authorization .introduction .signIn-btn, #main-page .hero .authorization .introduction .signUp-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 6.5rem;
+    width: 90%;
+    border-radius: 40px;
+    background: #4654EB;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+  }
+
+
+
+  #main-page .hero .authorization .signIn .btn-signIn-success, #main-page .hero .authorization .signIn .btn-return {
+    padding: 1.25rem;
+  
+    border: none;
+    outline: none;
+  }
+
+  #main-page .hero .authorization .signIn .btn-return {
+    position: absolute;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    bottom: 3.38rem;
+    left: 3.38rem;
+    background: none;
+  }
+
+  #main-page .hero .authorization .signIn .btn-signIn-success:hover {
+    background: #3C4DBD;
+  }
+  
+  #main-page .hero .authorization .signIn .btn-return:hover {
+    color: #4654EB;
+  }
+
+  
+#main-page .hero .continue-btn:hover {
+    background: #3C4DBD;
+  }
+
+  #main-page .content .return-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 2rem 8rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.5em;
+    background: #4654EB;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    border: none;
+    outline: none;
+  }
+
+  #main-page .content .return-btn:hover {
+    background: #3C4DBD;
+  }
+  .modal .modal-window .close-btn {
+
+    border: none;
+    background: none;
+    outline: none;
+  }
+  #main-page .hero .authorization .introduction .signIn-btn:hover, #main-page .hero .authorization .introduction .signUp-btn:hover {
+    background: #3C4DBD;
+  }
+  
+#main-page .hero .authorization .signIn .btn-signIn-success {
+    position: absolute;
+    bottom: 3.38rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 18px;
+    background: #4654EB;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+
+  .modal .modal-window form .fields .code input::-webkit-outer-spin-button, .modal .modal-window form .fields .code input::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  #main-page .hero .continue-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 2rem 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.5em;
+    background: #4654EB;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+   
+  }
