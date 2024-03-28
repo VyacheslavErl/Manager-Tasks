@@ -1,18 +1,18 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.decorators import login_required
 
 from tasks.models import TaskModel, CommentModel
-from users.models import UserModel
 from tasks.forms import TaskForm, CommentForm
 
-import calendar
 
-
+@login_required(login_url='/')
 def tasks_list(request):
     return render(request, 'tasks_list.html',
                   {'tasks': TaskModel.objects.all()})
 
 
+@login_required(login_url='/')
 def add_task(request):
     if request.method == "POST":
         form = TaskForm(request.POST, request.FILES)
@@ -27,6 +27,7 @@ def add_task(request):
     return render(request, 'tasks_add.html', {'form': form})
 
 
+@login_required(login_url='/')
 def task_info(request, task_id):
     if request.method == "POST":
         form = CommentForm(data=request.POST)
@@ -44,14 +45,10 @@ def task_info(request, task_id):
     return render(request, 'task_info.html', {'task': task, 'form': form, 'comments': comments})
 
 
+@login_required(login_url='/')
 def task_del(request, task_id):
     try:
         TaskModel.objects.get(id=task_id).delete()
     except ObjectDoesNotExist:
         pass
     return redirect("/tasks")
-
-
-def calendar_main(request):
-    cal = calendar.HTMLCalendar()
-    return render(request, 'calendar.html', {'cal': cal})
