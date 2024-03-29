@@ -35,27 +35,31 @@
       </div>
     </div>
     <div class="task-info-comments">
-      <div class="add-comment">
+      <form  action="/tasks/add_comment" class="add-comment">
           <textarea class="add-comment-field" placeholder="Добавить комментарий..."></textarea>
-          <button class="add-comment-submitBtn" type="submit">Добавить</button>
-      </div>
-      <ul class="comments">
-          <li class="comment">
-            <div class="header">
-                <div class="comment-image">
-                  <!-- <img src="Изображение"> -->
-                </div>
-                <div class="comment-user-name">
-                  <!-- Имя пользователя -->
-                </div>
-                <div class="comment-created-at">
-                  <!-- Дата публикации комментария -->
-                </div>
-              </div> 
-              <div class="comment-text">
-                <!-- Текст -->
+          <button class="add-comment-submitBtn"  type="submit">Добавить</button>
+      </form>
+      <ul class="comments"> 
+        {% for comment in comments %} 
+        <li class="comment">
+          <div class="header">
+              <div class="comment-image">
+                <img src="/static/images/profile.png">
               </div>
-          </li>
+              <div class="comment-user-name">
+                {{ comment.user }}
+              </div>
+              <div class="comment-created-at">
+                {{ comment.creation_date }}
+              </div>
+            </div> 
+            <div class="comment-text">
+              {{ comment.text }}
+            </div>
+        </li> 
+        {% endfor %}
+
+   
       </ul>
   </div>
   </div>
