@@ -37,18 +37,7 @@
 #content .page-title {
     font-size: 2.25em;
   }
-  #task-info .task-info-comments .comment .comment-text {
-    font-size: 18px;
-  }
-  #task-info .task-info-comments .comment .comment-user-name {
-    font-size: 18px;
-  }
-  #task-info .task-info-comments .comment .comment-created-at {
-    color: #686868;
-  }
-  #profile .profile-content .profile-info .profile-info-top .profile-info-top-name .profile-info-name {
-    font-size: 1.5625em;
-  }
+
 
   #profile .profile-logout span {
     color: #8A272A;
@@ -80,6 +69,25 @@
   #calendar .calendar-content-list-task:hover a .calendar-content-list-task-date, #calendar .calendar-content-list-task:hover a .calendar-content-list-task-slash, #calendar .calendar-content-list-task:hover a .calendar-content-list-task-name {
     color: #4654EB;
   }
+
+
+  .comment .comment-header .comment-user-name {
+    font-weight: 400;
+    font-size: 25px;
+    color: #000;
+  } 
+  .comment .comment-header .comment-created-at {
+    font-weight: 400;
+    font-size: 22px;
+    color: #686868;
+  } 
+   .comment .comment-text {
+    font-weight: 400;
+    font-size: 25px;
+    color: #000;
+  }
+
+
 
   @media screen and (min-width: 1147px) and (max-width: 1691px) {
     .profile-card {

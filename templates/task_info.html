@@ -40,26 +40,71 @@
           <button class="add-comment-submitBtn"  type="submit">Добавить</button>
       </form>
       <ul class="comments"> 
-        {% for comment in comments %} 
+
         <li class="comment">
-          <div class="header">
-              <div class="comment-image">
-                <img src="/static/images/profile.png">
+          <div class="comment-header">
+              <div class="comment-user-image">
+                <img src="https://source.unsplash.com/random/200x200?sig=1">
               </div>
               <div class="comment-user-name">
-                {{ comment.user }}
+                Lorem ipsum
               </div>
               <div class="comment-created-at">
-                {{ comment.creation_date }}
+                12.04.2015
               </div>
             </div> 
             <div class="comment-text">
-              {{ comment.text }}
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </div>
-        </li> 
-        {% endfor %}
-
-   
+        </li>
+        <li class="comment">
+          <div class="comment-header">
+              <div class="comment-user-image">
+                <img src="https://source.unsplash.com/random/200x200?sig=1">
+              </div>
+              <div class="comment-user-name">
+                Lorem ipsum
+              </div>
+              <div class="comment-created-at">
+                12.04.2015
+              </div>
+            </div> 
+            <div class="comment-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </div>
+        </li>
+        <li class="comment">
+          <div class="comment-header">
+              <div class="comment-user-image">
+                <img src="https://source.unsplash.com/random/200x200?sig=1">
+              </div>
+              <div class="comment-user-name">
+                Lorem ipsum
+              </div>
+              <div class="comment-created-at">
+                12.04.2015
+              </div>
+            </div> 
+            <div class="comment-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </div>
+        </li>
+        <li class="comment">
+          <div class="comment-header">
+              <div class="comment-user-image">
+                <img src="https://source.unsplash.com/random/200x200?sig=1">
+              </div>
+              <div class="comment-user-name">
+                Lorem ipsum
+              </div>
+              <div class="comment-created-at">
+                12.04.2015
+              </div>
+            </div> 
+            <div class="comment-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </div>
+        </li>
       </ul>
   </div>
   </div>
