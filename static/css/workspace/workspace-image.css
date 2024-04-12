@@ -26,6 +26,12 @@
   width: 32px;
   height: 32px;
 }
+#add-task .page-title  .page-title-priority img {
+  border-radius: 100%;
+  fill: #bc5d58;
+  width: 45px;
+  height: 45px;
+  }
 
  @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: landscape) {
    

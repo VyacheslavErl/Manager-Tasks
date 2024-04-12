@@ -127,6 +127,91 @@ body {
   height: 100%;
   gap: 2rem;
 }
+#add-task .page-title  #page-title-priority {
+  list-style: none;
+  flex-direction: row-reverse;
+gap: 12px;
+display: flex;
+
+}
+
+
+
+    #add-task .page-title   .page-title-priority-hide li:nth-child(n+2) {
+
+      transition: opacity 0.6s, visibility 0.8s, transform 0.6s;
+      opacity: 0;
+        visibility: hidden;
+      transform: translateX(105px);
+      
+      
+    
+      }
+      #add-task .page-title .page-title-priority-active li {
+        transition: opacity 0.6s, visibility 0.8s, transform 0.6s;
+        opacity: 1;
+        visibility: visible;
+      transform: translateX(0);
+        }
+
+
+
+
+    
+
+    #add-task .page-title  #page-title-priority #priorityCircle div{
+      border-radius: 100%;
+      width: 45px;
+      height: 45px;
+      
+    }
+
+
+    #add-task .page-title  #page-title-priority #priorityCircle  .priorityRed {
+
+      background-color: #bc5d58;
+    }
+  #add-task .page-title  #page-title-priority #priorityCircle .priorityBlue {
+    background-color: #5880bc;
+    }
+    #add-task .page-title  #page-title-priority #priorityCircle .priorityGreen {
+      background-color: #58bc5c;
+    }
+    #add-task .page-title  #page-title-priority #priorityCircle .priorityWhite {
+      background-color: #fff;
+    }
+
+
+
+    #add-task  .priorityNameRed {
+      border-left: 6px solid #8a272a;
+    }
+
+    #add-task  .priorityNameBlue {
+    border-left: 6px solid #3913e2;
+    }
+    #add-task   .priorityNameGreen {
+      border-left: 6px solid #22c413;
+    }
+
+
+
+    #add-task .page-title  #page-title-priority  .active div {
+
+      box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      }
+
+#add-task .page-title {
+flex-direction: row;
+display: flex;
+align-items: center;
+justify-content: space-between;
+  }
+
+
+
+
+
 
 #add-task .name input, #add-task .name textarea, #add-task .text input, #add-task .text textarea, #add-task .date input, #add-task .date textarea, #add-task .submit-btn input, #add-task .submit-btn textarea {
   width: 100%;
@@ -350,6 +435,7 @@ body {
       align-self: stretch;
   border-radius: 18px;
 }
+
 
 #task-info .task-info-comments .comments {
   display: -webkit-box;
