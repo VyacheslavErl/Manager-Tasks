@@ -32,11 +32,9 @@ WrapperButtons.addEventListener('mouseleave', ()=> {
 
 
     Buttons.forEach(Button => Button.addEventListener('click', ()=> {
-        Button.parentNode.insertBefore(Button, activeButton);
-        activeButton.classList.remove('active')
-        Button.classList.add('active')
 
-        activeButton = document.querySelector('.active');
+
+
         inputName.classList.remove(...[...inputName.classList].filter(n => n !== `${inputClass}`));
 
 if (Button.value !== 'priorityWhite') {
@@ -47,9 +45,11 @@ if (Button.value !== 'priorityWhite') {
 WrapperButtons.classList.remove('page-title-priority-active')
 WrapperButtons.classList.add('page-title-priority-hide')
 
-
-
-activeButton = document.querySelector('.active');
+Button.parentNode.insertBefore(Button, activeButton);
+activeButton.classList.remove('active')
+Button.classList.add('active')
+ 
+activeButton = document.querySelector('.active');   
 activeButton.addEventListener('mouseenter', ()=> {
 
 WrapperButtons.classList.remove('page-title-priority-hide')
