@@ -7,7 +7,23 @@
 {% block content %}
 <form id="add-task" class="form" method="POST" action="" novalidate enctype="multipart/form-data">
   {% csrf_token %}
-  <div class="page-title">Добавить задачу</div>
+  
+  <div class="page-title">
+    Изменить задачу
+    
+<div>
+
+    <div class="page-title-priority">
+<img class="hide" id="priorityCircle"  value='red' src="/static/images/priorityRed.png" alt="">
+<img class="hide" id="priorityCircle" value='green' src="/static/images/priorityGreen.png" alt="">
+<img class="hide" id="priorityCircle" value='blue' src="/static/images/priorityBlue.png" alt="">
+<img class="active"  id="priorityCircle" value='white'  src="/static/images/priorityWhite.png" alt="">
+    </div>
+
+
+  </div>
+
+  </div>
   <div class="name" >
     <input type="text" placeholder="Название" maxlength="22" name="name"></input>
     <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span>
@@ -32,8 +48,9 @@
     <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span> <!--Место под сообщение об ошибке в поле даты -->
   </div>
   <div class="submit-btn">
-    <input type="submit" value="Добавить">
+    <input type="submit" value="Изменить">
   </div>
 </form>
 <script src="/static/js/alert.js"></script>
+<script src="/static/js/priorityList.js"></script>
 {% endblock %}

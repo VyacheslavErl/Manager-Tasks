@@ -1,0 +1,7 @@
+#add-task .name input {
+    width: 100%;
+    height: 100%;
+  }
+  #add-task .image-input .image label input {
+    display: none;
+  }

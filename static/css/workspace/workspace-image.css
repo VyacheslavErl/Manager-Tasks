@@ -1,0 +1,52 @@
+#task-list .task .task-image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 18px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-filter: blur(0.5px);
+            filter: blur(0.5px);
+  }
+  #add-task .image-input #image-container img {
+   width: 100%;
+ }
+ #task-info .task-info-middle .task-info-do-before img {
+   width: 312px;
+   height: 312px;
+   border-radius: 18px;
+   -o-object-fit: cover;
+      object-fit: cover;
+ }#profile .profile-content .profile-card .profile-card-top img {
+   width: 9.375rem;
+   height: 9.375rem;
+   border-radius: 100%;
+ }
+ .comment .comment-header .comment-user-image img {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+#add-task .page-title  .page-title-priority img {
+  border-radius: 100%;
+  fill: #bc5d58;
+  width: 45px;
+  height: 45px;
+  }
+
+ @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: landscape) {
+   
+   #navigation #navbar li button img {
+     width: 35px;
+     height: 35px;
+   }
+  
+
+ }
+
+ @media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: portrait) {
+
+   #navigation #navbar li button img {
+     width: 35px;
+     height: 35px;
+   }
+ }
