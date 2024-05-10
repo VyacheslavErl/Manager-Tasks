@@ -33,7 +33,7 @@ def task_info(request, task_id):
         form = CommentForm(data=request.POST)
         if form.is_valid():
             form = form.save(commit=False)
-            form.by_user = request.user
+            form.user = request.user
             form.task_id = task_id
             form.save()
             return redirect('/tasks/info/' + str(task_id))
