@@ -32,3 +32,11 @@ class CommentForm(ModelForm):
     class Meta:
         model = CommentModel
         fields = ['text']
+
+        widgets = {
+            'text': TextInput(attrs={
+                'type': 'text',
+                'class': 'add-comment-field',
+                'placeholder': 'Добавить комментарий...'}
+            )
+        }
