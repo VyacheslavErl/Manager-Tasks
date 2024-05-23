@@ -1,0 +1,5 @@
+.venv
+prepros.config
+static/sass
+db.sqlite3
+.env

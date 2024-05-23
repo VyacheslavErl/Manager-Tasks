@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block content %}
+<div id="workers">
+    <div class="manager-card">
+        <div class="button worker-card open-popup">
+            <img src="/static/images/profile.png" alt="worker-card">
+            <h2>Фамилия</h2>
+            <h2>Имя</h2>
+            <span>Менеджер</span>
+        </div>
+    </div>
+    <div class="workers-list">
+        <a class="button arrow-prev">❮</a>
+        <div class="workers-cards">
+            {% for worker in workers %}
+                    <div class="popup-bg" id="{{ worker.username }}a">
+                    <div class="popup">
+                        <p class="button close-popup">✖</p>
+                        <img src="/static/images/profile.png" alt="worker-card">
+                        <h2>{{ worker.get_full_name }}</h2>
+                        <ul class="info-list">
+                            <li class="info-item">
+                                <div class="parameter-name">Должность:</div>
+                                <div class="parameter-info">{{ worker.job_title.name }}</div>
+                            </li>
+                            <li class="info-item">
+                                <div class="parameter-name">Дата вступления в компанию:</div>
+                                <div class="parameter-info">{{ worker.company_joining_date }}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button worker-card open-popup" id="{{ worker.username }}">
+                    <img src="/static/images/profile.png" alt="worker-card">
+                    <h2> {{ worker.last_name }} </h2>
+                    <h2> {{ worker.first_name }} </h2>
+                    <span> {{ worker.job_title.name }} </span>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="button arrow-next">❯</a>
+    </div>
+</div>
+{% endblock %}

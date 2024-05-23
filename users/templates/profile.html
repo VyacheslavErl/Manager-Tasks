@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block content %}
+<div id="profile">
+    <div class="profile-content">
+        <div class="profile-card">
+            <div class="profile-card-top">
+            <img src="/static/images/profile_icon.png" alt="profile-image" class="profile-card-image">
+            <div class="profile-card-username">{{ user.username }}</div>
+            </div>
+            <a href="/user/edit">редактировать</a>
+        </div>
+        <div class="profile-info">
+            <div class="profile-info-top">
+                <div class="profile-info-top-name">
+                    <img src="/static/images/profile_icon.png" alt="profile-image" class="profile-info-image">
+                    <div class="profile-info-name">{{ user.get_full_name}}</div>
+                </div>
+                <a href="/companies" class="profile-info-company">{{ user.company.name }}</a>
+            </div>
+            <ul class="profile-info-list">
+                <li class="profile-info-list-birthday">
+                    <div class="parameter-name">Дата рождения:</div>
+                    <span class="parameter-data">06.06.1982</span>
+                </li>
+                <li class="profile-info-list-creation-date">
+                    <div class="parameter-name">Дата создания аккаунта:</div>
+                    <div class="parameter-data">{{ user.date_joined }}</span>
+                </li>
+            </ul>
+        </div>
+    </div> 
+    <a href="/user/logout" class="profile-logout">
+        <img src="/static/images/exit.png" alt="logout-image">
+        <span>Выход</span>
+    </a>    
+</div>
+{% endblock %}

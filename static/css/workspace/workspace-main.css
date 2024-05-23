@@ -1,0 +1,934 @@
+* {
+
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+#navbar li {
+  width: 100%;
+  height: 100%;
+}
+
+#navbar li .active {
+  color: #4654EB;
+  background: #F3F3FB;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5rem 3.125rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 3.125rem;
+  background: #ffffff;
+}
+
+#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  list-style: none;
+}
+
+
+
+
+
+#task-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  list-style: none;
+  gap: 20px;
+}
+
+
+
+#task-list .task .task-name {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+#task-list .task .task-text {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+}
+#content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 3.375rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.625rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-radius: 4.125rem;
+  background: #e0e0ef;
+}
+
+
+
+
+#add-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+}
+#add-task .page-title  #page-title-priority {
+  list-style: none;
+  flex-direction: row-reverse;
+gap: 12px;
+display: flex;
+
+}
+
+
+
+    #add-task .page-title   .page-title-priority-hide li:nth-child(n+2) {
+
+      transition: opacity 0.6s, visibility 0.8s, transform 0.6s;
+      opacity: 0;
+        visibility: hidden;
+      transform: translateX(105px);
+      
+      
+    
+      }
+      #add-task .page-title .page-title-priority-active li {
+        transition: opacity 0.6s, visibility 0.8s, transform 0.6s;
+        opacity: 1;
+        visibility: visible;
+      transform: translateX(0);
+        }
+
+
+
+
+    
+
+    #add-task .page-title  #page-title-priority #priorityCircle div{
+      border-radius: 100%;
+      width: 45px;
+      height: 45px;
+      
+    }
+
+
+    #add-task .page-title  #page-title-priority #priorityCircle  .priorityRed {
+
+      background-color: #bc5d58;
+    }
+  #add-task .page-title  #page-title-priority #priorityCircle .priorityBlue {
+    background-color: #5880bc;
+    }
+    #add-task .page-title  #page-title-priority #priorityCircle .priorityGreen {
+      background-color: #58bc5c;
+    }
+    #add-task .page-title  #page-title-priority #priorityCircle .priorityWhite {
+      background-color: #fff;
+    }
+
+
+
+    #add-task  .priorityNameRed {
+      border-left: 6px solid #8a272a;
+    }
+
+    #add-task  .priorityNameBlue {
+    border-left: 6px solid #3913e2;
+    }
+    #add-task   .priorityNameGreen {
+      border-left: 6px solid #22c413;
+    }
+
+
+
+    #add-task .page-title  #page-title-priority  .active div {
+
+      box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      }
+
+#add-task .page-title {
+flex-direction: row;
+display: flex;
+align-items: center;
+justify-content: space-between;
+  }
+
+
+
+
+
+
+#add-task .name input, #add-task .name textarea, #add-task .text input, #add-task .text textarea, #add-task .date input, #add-task .date textarea, #add-task .submit-btn input, #add-task .submit-btn textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+
+  resize: none;
+  overflow-x: scroll;
+  overflow: hidden;
+}
+#add-task .name input:focus, #add-task .name textarea:focus, #add-task .text input:focus, #add-task .text textarea:focus, #add-task .date input:focus, #add-task .date textarea:focus, #add-task .submit-btn input:focus, #add-task .submit-btn textarea:focus {
+  outline: none;
+}
+#add-task .name {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#add-task .text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-flex: 8;
+      -ms-flex-positive: 8;
+          flex-grow: 8;
+}
+#add-task .text textarea {
+  width: 100%;
+  height: 100%;
+}
+#add-task .image-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+  position: relative;
+}
+
+#add-task .image-input .image label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+#add-task .image-input .image label .alert {
+  left: 0 !important;
+}
+#add-task .image-input #image-container {
+  width: 100px;
+  height: 100px;
+  display: none;
+  border: dashed 3px #3b3d45;
+  border-radius: 18px;
+}
+
+#add-task .image-input #image-container:hover {
+  border: dashed 3px #4654EB;
+}
+#add-task .date {
+  position: absolute;
+  width: 12%;
+  padding: 10px 15px;
+  top: 0;
+  right: 0;
+}
+#add-task .date .alert {
+  right: 0 !important;
+}
+
+#add-task .alert {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  left: 40%;
+
+  white-space: nowrap;
+}
+
+#task-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.3%;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: 100%;
+  height: 100%;
+}
+#task-info .task-info-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+
+}
+#task-info .task-info-top .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#task-info .task-info-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+#task-info .task-info-middle .task-info-text {
+  width: 100%;
+  height: 38%;
+
+  word-break: break-all;
+  overflow: scroll;
+}
+#task-info .task-info-middle .task-info-do-before {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+
+}
+
+#task-info .task-info-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+#task-info .task-info-comments .add-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+#task-info .task-info-comments .add-comment .add-comment-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-radius: 18px;
+}
+
+
+#task-info .task-info-comments .comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  height: 250px; 
+  overflow-y: scroll;
+}
+#task-info .task-info-comments .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 1112px;
+      margin-bottom: 7px;
+      flex-direction: column;
+}
+
+
+
+#task-info .task-info-comments .comment .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+#profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  gap: 4%;
+  width: 100%;
+  height: 100%;
+}
+#profile .profile-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2%;
+  width: 100%;
+  height: 42%;
+}
+#profile .profile-content .profile-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  gap: 4.5%;
+  width: 22%;
+  height: 88%;
+  padding: 2%;
+  border-radius: 1.13rem;
+  background-color: #ffffff;
+  min-width: 120px;
+}
+#profile .profile-content .profile-card .profile-card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.13rem;
+  background-color: #e0e0ef;
+}
+
+
+#profile .profile-content .profile-card a {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 1.13rem;
+
+  background-color: #e0e0ef;
+}
+#profile .profile-content .profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5%;
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  height: 88%;
+  width: 100%;
+  padding: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+
+}
+#profile .profile-content .profile-info .profile-info-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+#profile .profile-content .profile-info .profile-info-top .profile-info-top-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5em;
+}
+
+#profile .profile-content .profile-info .profile-info-top .profile-info-status {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+#profile .profile-content .profile-info .profile-info-top .profile-info-company {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+}
+
+#profile .profile-content .profile-info .profile-info-list {
+  list-style: none;
+}
+#profile .profile-content .profile-info .profile-info-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#profile .profile-content .profile-info .profile-info-list li .parameter-name {
+  display: inline-block;
+}
+#profile .profile-content .profile-info .profile-info-list li .parameter-data {
+  display: inline-block;
+  margin-right: 18em;
+}
+#profile .profile-logout {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  bottom: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+
+#calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.8rem;
+}
+#calendar .calendar-content-calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+#calendar .calendar-content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.75em;
+}
+#calendar .calendar-content-top .calendar-content-top-swith {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+#calendar .calendar-content-top .calendar-content-top-swith a {
+  text-decoration: none;
+}
+#calendar .calendar-content-top .calendar-content-top-swith a:hover {
+  color: #4654EB;
+  cursor: pointer;
+}
+#calendar .calebdar-content-table {
+  background: #ffffff;
+  padding: 1.5625rem 2.1875rem;
+  border-radius: 18px;
+}
+#calendar table {
+  border-collapse: collapse;
+}
+#calendar td, #calendar th {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.7rem 1.3rem;
+  text-align: center;
+}
+#calendar td a, #calendar th a {
+  font-size: 1.375em;
+  text-decoration: none;
+}
+#calendar td:hover a, #calendar th:hover a {
+  color: #4654EB;
+}
+#calendar .noday {
+  font-size: 1.375em;
+  color: #686868;
+}
+#calendar th {
+  font-size: 1.375em;
+}
+#calendar td:first-child, #calendar th:first-child {
+  padding-left: 0;
+}
+#calendar .calendar-table-dow {
+  margin-bottom: 1.5rem;
+}
+#calendar .calendar-content-list-task {
+  list-style: none;
+}
+#calendar .calendar-content-list-task a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.75rem;
+  font-size: 1.375em;
+}
+
+
+.comment .comment-header  {
+  width: 331px;
+  height: 32px;
+  flex-direction:  row;
+  display: flex;
+  align-items: center;
+  
+}
+.comment .comment-header .comment-user-name {
+margin-left: 7px;
+margin-right: 7px;
+}
+/* .comment .comment-header .comment-created-at {
+
+}  */
+.comment .comment-text {
+margin-top: 10px;
+} 
+
+
+
+
+
+
+
+@media screen and (min-width: 1147px) and (max-width: 1691px) {
+  .profile-card {
+    width: 35% !important;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: landscape) {
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: #e0e0ef;
+    gap: 1rem;
+  }
+  #navigation {
+    width: 100%;
+  }
+  #navigation #navbar {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    gap: 1rem !important;
+    list-style: none !important;
+    padding: 1rem !important;
+    background: #ffffff !important;
+    border-radius: 36px !important;
+  }
+  #navigation #navbar li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+
+  #navigation #navbar .nav-app-title {
+    display: none;
+  }
+  #content {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #content > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 88% !important;
+  }
+  .profile-card {
+    display: none !important;
+  }
+  .profile-info {
+    width: 94% !important;
+  }
+
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media only screen and (min-width: 1147px) and (max-width: 1468px) {
+  .parameter-data {
+    margin-right: 8em !important;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 1146px) and (orientation: portrait) {
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #e0e0ef;
+    gap: 1rem;
+  }
+  #navigation {
+    width: 100%;
+  }
+  #navigation #navbar {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    gap: 1rem !important;
+    list-style: none !important;
+    padding: 1rem !important;
+    background: #ffffff !important;
+    border-radius: 36px !important;
+  }
+  #navigation #navbar li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+
+  #navigation #navbar .nav-app-title {
+    display: none;
+  }
+  #navigation #content {
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #content > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 22px;
+  }
+  .profile-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 88% !important;
+  }
+  .profile-card {
+    display: none !important;
+  }
+  .profile-info {
+    width: 94% !important;
+  }
+  .profile-info-image {
+    display: inline-block !important;
+    width: 45px;
+    height: 45px;
+  }
+  .parameter-data {
+    margin-right: 12em !important;
+  }
+}

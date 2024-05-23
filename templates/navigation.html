@@ -1,0 +1,72 @@
+{% block content %}
+<ul id="navbar">
+    <li class="nav-app-title">
+        <form action="/" method="GET">
+            <button class="app-title">
+                <img src="/static/images/logo.png" class="app-icon">
+                Manager Tasks
+            </button>
+        </form>
+    </li>
+    <li>
+        <form action="/tasks" method="GET">
+                <button
+                    {% if request.path == '/tasks/' %}
+                        class="active"
+                    {% endif %}
+                    type="submit">
+                    <img src="/static/images/main.png" class="nav-icon">
+                    Задачи
+                </button>
+        </form>
+    </li>
+    <li>
+        <form action="/tasks/calendar" method="GET">
+                <button
+                    {% if request.path == '/calender' %}
+                        class="active"
+                    {% endif %}
+                    type="submit">
+                    <img src="/static/images/calendar.png" class="nav-icon">
+                    Календарь
+                </button>
+        </form>
+    </li>
+    <li>
+        <form action="/companies" method="GET">
+                <button
+                    {% if request.path == '/companies' %}
+                        class=""
+                    {% endif %}
+                    type="submit">
+                    <img src="/static/images/companies.png" class="nav-icon">
+                    Организации
+                </button>
+        </form>
+    </li>
+    <li>
+        <form action="/workers" method="GET">
+                <button
+                    {% if request.path == '/workers' %}
+                        class=""
+                    {% endif %}
+                    type="submit">
+                    <img src="/static/images/workers.png" class="nav-icon">
+                    Соотрудники
+                </button>
+        </form>
+    </li>
+    <li>
+        <form action="/user/profile" method="GET">
+                <button
+                    {% if request.path == '/user/profile' %}
+                        class="active"
+                    {% endif %}
+                    type="submit">
+                    <img src="/static/images/profile.png" class="nav-icon">
+                    Albert Tiria
+                </button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

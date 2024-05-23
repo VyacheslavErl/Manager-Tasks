@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ task.name }}
+{% endblock %}
+
+{% block content %}
+  <div id="task-info">
+    <div class="task-info-top">
+      <div class="header">
+        <div class="page-title">
+          {{task.name}}
+        </div>
+        <div class="task-info-created-by">
+          <a style="color: #4654EB">{{task.user.get_full_name }}</a>
+        </div>
+      </div>
+      <div class="task-info-date">
+        {{task.creation_date}}
+      </div>
+      <div class="task-info-edit">
+        <a>
+            <img class="task-info-edit-img">
+        </a>
+      </div>
+    </div>
+    <div class="task-info-middle">
+      <div class="task-info-text">
+        {{task.text}}
+      </div>
+      <div class="task-info-do-before">
+        <img src=/media/{{task.image}}>
+        {{ task.do_before }}
+      </div>
+    </div>
+    <div class="task-info-comments">
+      <form method="Post" class="add-comment">
+        {% csrf_token %}
+        {{ form.text }}
+        <button class="add-comment-submitBtn"  type="submit">Добавить</button>
+      </form>
+      <ul class="comments"> 
+        {% for comment in comments %}
+            <li class="comment">
+              <div class="comment-header">
+                  <div class="comment-user-image">
+                    <img src=/media/{{comment.user.image}}>
+                  </div>
+                  <div class="comment-user-name">
+                    {{ comment.user.get_full_name }}
+                  </div>
+                  <div class="comment-created-at">
+                    {{ comment.creation_date }}
+                  </div>
+                </div>
+                <div class="comment-text">
+                  {{ comment.text }}
+                </div>
+            </li>
+        {% endfor %}
+      </ul>
+  </div>
+  </div>
+{% endblock %}

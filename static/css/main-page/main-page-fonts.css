@@ -1,0 +1,143 @@
+*{
+    font-family: "Calibri";
+    font-style: normal;
+    font-weight: 800;
+    color: #FFF;
+    letter-spacing: 5%;
+}
+
+#main-page .hero .hero-title .hero-title-subject .heading p {
+    font-size: 6em;
+    line-height: normal;
+    letter-spacing: 0.28rem;
+}
+#main-page .hero .hero-title .hero-title-subject .slogan p {
+    font-size: 1.5em;
+  }
+
+
+  #main-page .hero .hero-title .hero-title-image .slogan {
+    font-size: 1.5em;
+  }
+
+  #main-page .hero .authorization .introduction p, #main-page .hero .authorization .signIn form p {
+    font-size: 48px;
+  }
+
+  #main-page .hero .authorization .introduction .signIn-btn, #main-page .hero .authorization .introduction .signUp-btn {
+    font-size: 1.5rem;
+  }
+
+  #main-page .hero .authorization .signIn form input {
+    background: #ffffff;
+    font-size: 1.4em;
+    color: #000000;
+  }
+
+  #main-page .hero .authorization .signIn .btn-signIn-success, #main-page .hero .authorization .signIn .btn-return {
+    font-size: 1.2em;
+  }
+
+  #main-page .hero .continue-btn {
+    font-size: 1.4rem;
+    letter-spacing: 0.1125rem;
+    text-decoration: none;
+  }
+  #main-page .content .slogan {
+    font-size: 1.8em;
+  }
+
+  #main-page .content .content-description .item ul p {
+    font-size: 1.5rem;
+  }
+  #main-page .content .content-description .item ul li {
+    font-size: 1.125rem;
+  }
+
+  #main-page .content .return-btn {
+    font-size: 1.8rem;
+    letter-spacing: 0.1125rem;
+  }
+
+  .modal .modal-window .close-btn {
+    font-size: 3em;
+  }
+
+  .modal .modal-window .close-btn:hover {
+    color: #C41E3A;
+  }
+  .modal .modal-window form p {
+    font-size: 2.25em;
+  }
+
+  .modal .modal-window form .fields input {
+    color: #000000;
+    font-size: 1.4em;
+    font-weight: 400;
+  }
+
+  .modal .modal-window form .fields .image {
+    font-size: 4rem;
+  }
+
+  .modal .modal-window form .fields .image label div {
+    font-size: 3rem;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .modal .modal-window form .fields .image:hover label div {
+    color: #3C4DBD;
+  }
+
+  .modal .modal-window form .registration-submit input {
+    font-weight: 400;
+    font-size: 1.4em;
+    color: #000000;
+  }
+
+  .modal .modal-window form .registration-submit input:hover {
+    color: #FFF;
+  }
+
+  .alert {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+
+  #main-page .hero .hero-title .hero-title-subject .heading p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  ::-webkit-input-placeholder {
+    color: #686868;
+  }
+  
+  ::-moz-placeholder {
+    color: #686868;
+  }
+  
+  :-ms-input-placeholder {
+   color: #686868;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #686868;
+  }
+  
+  ::placeholder {
+   color: #686868;
+  }
+
+  .modal .modal-window form .fields span {
+    display: none;
+  }
+  #main-page .content .content-description .item ul p {
+
+    margin-bottom: 0.5rem;
+  }

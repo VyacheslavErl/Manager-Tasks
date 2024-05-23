@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/workspace/workspace-main.css">
+    <link rel="stylesheet" href="/static/css/workspace/workspace-button.css">
+    <link rel="stylesheet" href="/static/css/workspace/workspace-fonts.css">
+    <link rel="stylesheet" href="/static/css/workspace/workspace-image.css">
+    <link rel="stylesheet" href="/static/css/workspace/workspace-image-wrapper.css">
+    <link rel="stylesheet" href="/static/css/workspace/workspace-input.css">
+    <link rel="stylesheet" href="/static/css/workspace/workspace.icon.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.js"
+  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
+    <nav id="navigation">
+        {% include "navigation.html" %}
+    </nav>
+    <div id="content">
+            {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>

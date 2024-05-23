@@ -1,0 +1,397 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main-page {
+  position: relative;
+  height: 380%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  padding-top: 60px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4.3125rem;
+  background: #3D3548;
+}
+#main-page .hero {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28rem;
+  margin: 10px;
+}
+
+#main-page .hero .hero-title .hero-title-subject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+
+
+#main-page .hero .hero-title .hero-title-image {
+  width: 350px;
+  height: 450px;
+  border-radius: 40px 200px 40px 40px;
+  overflow: hidden;
+}
+
+
+#main-page .hero .authorization .introduction, #main-page .hero .authorization .signIn form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 37rem;
+  height: 37rem;
+  padding: 3.38rem;
+  border-radius: 80px;
+  background: #201D26;
+}
+
+#main-page .hero .authorization .introduction {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6.5rem;
+}
+
+
+#main-page .hero .authorization .signIn {
+  display: none;
+  position: relative;
+}
+#main-page .hero .authorization .signIn form {
+  gap: 2rem;
+}
+
+
+
+
+#main-page .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6.25rem 7.1875rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 6.75rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-radius: 13.75rem 13.75rem 0rem 0rem;
+  background: #201D26;
+}
+
+#main-page .content .content-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 8rem;
+}
+#main-page .content .content-description .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.5rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  list-style: none;
+}
+#main-page .content .content-description .item ul {
+  list-style: none;
+}
+
+
+
+
+
+.alert {
+  display: none;
+}
+
+.modal {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.modal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.modal .modal-window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1200px;
+  height: 750px;
+  padding: 54px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 4rem;
+  -webkit-box-shadow: 30px 30px 100px 44px rgba(0, 0, 0, 0.25);
+          box-shadow: 30px 30px 100px 44px rgba(0, 0, 0, 0.25);
+  background: url("/static/images/registraion_bg.png") lightgray 50%/cover no-repeat;
+  -webkit-backdrop-filter: brightness(75%);
+          backdrop-filter: brightness(75%);
+}
+
+
+.modal .modal-window form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 65px;
+}
+
+.modal .modal-window form .fields {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 162px 1.6rem 162px 1.6rem 162px 1.6rem 162px 1.6rem 162px 1.6rem 162px;
+  grid-template-columns: repeat(6, 162px);
+  -ms-grid-rows: 68px 1.25rem 68px 1.25rem 68px 1.25rem 68px;
+  grid-template-rows: repeat(4, 68px);
+  width: 100%;
+  height: 100%;
+  row-gap: 1.25rem;
+  -webkit-column-gap: 1.6rem;
+     -moz-column-gap: 1.6rem;
+          column-gap: 1.6rem;
+}
+.modal .modal-window form .fields > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.modal .modal-window form .fields > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.modal .modal-window form .fields > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.modal .modal-window form .fields > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+}
+.modal .modal-window form .fields > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 9;
+}
+.modal .modal-window form .fields > *:nth-child(6) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 11;
+}
+.modal .modal-window form .fields > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.modal .modal-window form .fields > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.modal .modal-window form .fields > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.modal .modal-window form .fields > *:nth-child(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+}
+.modal .modal-window form .fields > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 9;
+}
+.modal .modal-window form .fields > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 11;
+}
+.modal .modal-window form .fields > *:nth-child(13) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+.modal .modal-window form .fields > *:nth-child(14) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+.modal .modal-window form .fields > *:nth-child(15) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+.modal .modal-window form .fields > *:nth-child(16) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+}
+.modal .modal-window form .fields > *:nth-child(17) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 9;
+}
+.modal .modal-window form .fields > *:nth-child(18) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 11;
+}
+.modal .modal-window form .fields > *:nth-child(19) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+}
+.modal .modal-window form .fields > *:nth-child(20) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+}
+.modal .modal-window form .fields > *:nth-child(21) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+}
+.modal .modal-window form .fields > *:nth-child(22) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 7;
+}
+.modal .modal-window form .fields > *:nth-child(23) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 9;
+}
+.modal .modal-window form .fields > *:nth-child(24) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 11;
+}
+
+
+
+
+.modal .modal-window form .fields .image label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.modal .modal-window form .fields .date {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4/6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+.modal .modal-window form .fields .code {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.modal .modal-window form .fields .repeatPassword {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-column: 4/7;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+
+
+.alert {
+ 
+  z-index: 2;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
