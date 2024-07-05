@@ -82,7 +82,7 @@ body {
 .board-btn button:hover {
   background: #E0E0EF;
   animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+  transition: all 0.2s ease-out;
 }
 
 .board-btn .active {
