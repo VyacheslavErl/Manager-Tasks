@@ -5,6 +5,45 @@
 {% endblock %}
 
 {% block content %}
+    <ul id="boards">
+        <!-- {% for board in boards %}
+        <li class="board">
+            <form action="/boards/tasks/{{ board.id }}">
+                <button type="submit">
+                    <div class="board-name">{{ board.name }}</div>
+                </button>
+            </form>
+        </li>
+        {% endfor %} -->
+        <li class="board-btn">
+            <form action="">
+                <button type="submit" class="active">
+                    <div class="board-name">Сделать</div>
+                </button>
+            </form>
+        </li>
+        <li class="board-btn">
+            <form action="">
+                <button type="submit">
+                    <div class="board-name">В работе</div>
+                </button>
+            </form>
+        </li>
+        <li class="board-btn">
+            <form action="">
+                <button type="submit">
+                    <div class="board-name">Готово</div>
+                </button>
+            </form>
+        </li>
+        <li class="board-btn">
+            <form action="">
+                <button type="submit">
+                    <div class="board-name">+</div>
+                </button>
+            </form>
+        </li>
+    </ul>
     <ul id="task-list">
         {% for task in tasks %}
         <li class="task">
@@ -19,6 +58,6 @@
         </li>
         {% endfor %}
     </ul>
-    <a class="add-task-btn" href="/tasks/add">+</a>
+    <img class="add-task-btn" href="/tasks/add" src="../static/images/plus.png">
     </form>
 {% endblock %}

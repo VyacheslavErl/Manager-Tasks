@@ -65,7 +65,9 @@
 
   
 #task-list .task form button:hover {
-    background: #4654EB;
+    background: #809CC8;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
   }
 
   .add-task-btn {
@@ -86,9 +88,6 @@
         align-self: flex-end;
     font-size: 46px;
     color: #ffffff;
-    text-decoration: none;
-    background: #4654EB;
-    text-align: center;
     border-radius: 100%;
   }
   #add-task .name, #add-task .text, #add-task .date, #add-task .submit-btn {

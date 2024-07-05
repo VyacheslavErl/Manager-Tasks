@@ -6,7 +6,7 @@
        object-fit: cover;
     -webkit-filter: blur(0.5px);
             filter: blur(0.5px);
-  }
+}
   #add-task .image-input #image-container img {
    width: 100%;
  }
