@@ -39,18 +39,18 @@
   </div>
   <div class="name" >
     <input type="text" placeholder="Название" maxlength="22" name="name"></input>
-    <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span>
+    <span class="alert">{% for error in form.name.errors %} {{ error }} {% endfor %}</span>
   </div>
   <div class="text">
     <textarea type="text" placeholder="Описание" name="text"></textarea>
-    <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span> <!--Место под сообщение об ошибке в поле описания -->
+   <span class="alert">{% for error in form.text.errors %} {{ error }} {% endfor %}</span> <!--Место под сообщение об ошибке в поле описания -->
   </div>
   <div class="image-input">
     <div class="image" >
       <label>
           <div>+</div>
           <input type="file" accept="image/*" name="image" onchange="uploadImage(event)">
-          <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span>
+          <span class="alert">{% for error in form.image.errors %} {{ error }} {% endfor %}</span>
       </label>
       <script src="/static/js/uploadImage.js"></script>
     </div>
@@ -58,7 +58,7 @@
   </div>
   <div class="date">
     <input type="date" placeholder="" name="do_before">
-    <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span> <!--Место под сообщение об ошибке в поле даты -->
+    <span class="alert">{% for error in form.do_before.errors %} {{ error }} {% endfor %}</span> <!--Место под сообщение об ошибке в поле даты -->
   </div>
   <div class="submit-btn">
     <input type="submit" value="Добавить">
