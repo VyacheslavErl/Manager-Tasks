@@ -30,7 +30,7 @@ class TaskForm(ModelForm):
 
     def clean(self):
         image = self.cleaned_data.get('image')
-        if image.size > 0.1*1024*1024:
+        if image.size > 2*1024*1024:
             self._errors["image"] = ErrorList(["Файл слишком большой. Размер не должен превышать 2 МБ."])
 
 class CommentForm(ModelForm):
