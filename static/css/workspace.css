@@ -138,6 +138,13 @@ body {
   font-size: 2.25em;
 }
 
+#boards {
+  display: flex;
+  flex-direction: row;
+  padding: 54px 22px;
+  width: 100%;
+}
+
 #task-list {
   display: -webkit-box;
   display: -ms-flexbox;

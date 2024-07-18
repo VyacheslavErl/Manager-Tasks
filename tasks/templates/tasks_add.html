@@ -13,44 +13,31 @@
     
 <div>
 
-
-  <ul  class="page-title-priority-hide" id="page-title-priority">
-    <li   id="priorityCircle" priorityValue='priorityNameWhite'  class="active"  >
-<div class="priorityWhite"></div>
-    </li>
-      <li id="priorityCircle" priorityValue='priorityNameBlue' >
-       <div class="priorityBlue"></div>
-      </li >
-      <li id="priorityCircle" priorityValue="priorityNameGreen">
-<div class="priorityGreen"></div>
-      </li>
-      <li id="priorityCircle" priorityValue="priorityNameRed">
-<div class="priorityRed"></div>
-    </li>
-
-
-
-
-</ul>
-
+  <select id="priority">
+    <option value="0" id="priority-none">Нет приоритета</option>
+    <option value="1" id="priority-low">Низкий</option>
+    <option value="2" id="priority-medium">Средний</option>
+    <option value="3" id="priority-hight">Высокий</option>
+    <option value="4" id="priority-hightest">Высший</option>
+  </select>
 
   </div>
 
   </div>
   <div class="name" >
     <input type="text" placeholder="Название" maxlength="22" name="name"></input>
-    <span class="alert">{% for error in form.name.errors %} {{ error }} {% endfor %}</span>
+    <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span>
   </div>
   <div class="text">
     <textarea type="text" placeholder="Описание" name="text"></textarea>
-   <span class="alert">{% for error in form.text.errors %} {{ error }} {% endfor %}</span> <!--Место под сообщение об ошибке в поле описания -->
+    <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span> <!--Место под сообщение об ошибке в поле описания -->
   </div>
   <div class="image-input">
     <div class="image" >
       <label>
           <div>+</div>
           <input type="file" accept="image/*" name="image" onchange="uploadImage(event)">
-          <span class="alert">{% for error in form.image.errors %} {{ error }} {% endfor %}</span>
+          <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span>
       </label>
       <script src="/static/js/uploadImage.js"></script>
     </div>
@@ -58,12 +45,11 @@
   </div>
   <div class="date">
     <input type="date" placeholder="" name="do_before">
-    <span class="alert">{% for error in form.do_before.errors %} {{ error }} {% endfor %}</span> <!--Место под сообщение об ошибке в поле даты -->
+    <span class="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius explicabo blanditiis animi numquam invre laborum!</span> <!--Место под сообщение об ошибке в поле даты -->
   </div>
   <div class="submit-btn">
     <input type="submit" value="Добавить">
   </div>
 </form>
 <script src="/static/js/alert.js"></script>
-<script src="/static/js/priorityList.js"></script>
 {% endblock %}

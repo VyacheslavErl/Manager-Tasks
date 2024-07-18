@@ -33,7 +33,7 @@ def task_info(request, task_id):
         form = CommentForm(data=request.POST)
         if form.is_valid():
             form = form.save(commit=False)
-            form.user = request.user
+            form.by_user = request.user
             form.task_id = task_id
             form.save()
             return redirect('/tasks/info/' + str(task_id))
@@ -47,8 +47,11 @@ def task_info(request, task_id):
 
 @login_required(login_url='/')
 def task_del(request, task_id):
-    try:
-        TaskModel.objects.get(id=task_id).delete()
-    except ObjectDoesNotExist:
-        pass
-    return redirect("/tasks")
+    user = UserModel.objects.get(id=id)
+    permission = user.job_title
+    if permission:
+        try:
+            TaskModel.objects.get(id=task_id).delete() # вношу изменения в этом декораторе
+        except ObjectDoesNotExist:
+            pass
+        return redirect("/tasks")
