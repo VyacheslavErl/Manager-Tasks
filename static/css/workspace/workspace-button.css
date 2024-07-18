@@ -65,7 +65,9 @@
 
   
 #task-list .task form button:hover {
-    background: #4654EB;
+    background: #809CC8;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.2s ease-out;
   }
 
   .add-task-btn {
@@ -73,9 +75,10 @@
     display: -ms-flexbox;
     display: flex;
     position: absolute;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -86,10 +89,12 @@
         align-self: flex-end;
     font-size: 46px;
     color: #ffffff;
-    text-decoration: none;
-    background: #4654EB;
-    text-align: center;
     border-radius: 100%;
+    transition: all 0.2s ease-out;
+  }
+  .add-task-btn img {
+    width: 75px;
+    height: 75px;
   }
   #add-task .name, #add-task .text, #add-task .date, #add-task .submit-btn {
     position: relative;
@@ -109,6 +114,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    transition: all 0.2s ease-out;
   }
   #task-info .task-info-comments .add-comment .add-comment-submitBtn {
     width: 185px;

@@ -12,16 +12,20 @@
           {{task.name}}
         </div>
         <div class="task-info-created-by">
-          <a style="color: #4654EB">Альберт Тирия</a>
-          {{task.by_user}}
+          <a style="color: #4654EB">{{task.user.get_full_name }}</a>
         </div>
       </div>
       <div class="task-info-date">
-        {{task.created_at}}
+        {{task.creation_date}}
       </div>
       <div class="task-info-edit">
         <a>
             <img class="task-info-edit-img">
+        </a>
+      </div>
+      <div class="task-info-delete">
+        <a href="/tasks/{{task}}/del">
+            <img class="task-info-delete-img" src="/static/images/delete.png"> 
         </a>
       </div>
     </div>
@@ -35,76 +39,30 @@
       </div>
     </div>
     <div class="task-info-comments">
-      <form  action="/tasks/add_comment" class="add-comment">
-          <textarea class="add-comment-field" placeholder="Добавить комментарий..."></textarea>
-          <button class="add-comment-submitBtn"  type="submit">Добавить</button>
+      <form method="Post" class="add-comment">
+        {% csrf_token %}
+        {{ form.text }}
+        <button class="add-comment-submitBtn"  type="submit">Добавить</button>
       </form>
       <ul class="comments"> 
-
-        <li class="comment">
-          <div class="comment-header">
-              <div class="comment-user-image">
-                <img src="https://source.unsplash.com/random/200x200?sig=1">
-              </div>
-              <div class="comment-user-name">
-                Lorem ipsum
-              </div>
-              <div class="comment-created-at">
-                12.04.2015
-              </div>
-            </div> 
-            <div class="comment-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </div>
-        </li>
-        <li class="comment">
-          <div class="comment-header">
-              <div class="comment-user-image">
-                <img src="https://source.unsplash.com/random/200x200?sig=1">
-              </div>
-              <div class="comment-user-name">
-                Lorem ipsum
-              </div>
-              <div class="comment-created-at">
-                12.04.2015
-              </div>
-            </div> 
-            <div class="comment-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </div>
-        </li>
-        <li class="comment">
-          <div class="comment-header">
-              <div class="comment-user-image">
-                <img src="https://source.unsplash.com/random/200x200?sig=1">
-              </div>
-              <div class="comment-user-name">
-                Lorem ipsum
-              </div>
-              <div class="comment-created-at">
-                12.04.2015
-              </div>
-            </div> 
-            <div class="comment-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </div>
-        </li>
-        <li class="comment">
-          <div class="comment-header">
-              <div class="comment-user-image">
-                <img src="https://source.unsplash.com/random/200x200?sig=1">
-              </div>
-              <div class="comment-user-name">
-                Lorem ipsum
-              </div>
-              <div class="comment-created-at">
-                12.04.2015
-              </div>
-            </div> 
-            <div class="comment-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </div>
-        </li>
+        {% for comment in comments %}
+            <li class="comment">
+              <div class="comment-header">
+                  <div class="comment-user-image">
+                    <img src=/media/{{comment.user.image}}>
+                  </div>
+                  <div class="comment-user-name">
+                    {{ comment.user.get_full_name }}
+                  </div>
+                  <div class="comment-created-at">
+                    {{ comment.creation_date }}
+                  </div>
+                </div>
+                <div class="comment-text">
+                  {{ comment.text }}
+                </div>
+            </li>
+        {% endfor %}
       </ul>
   </div>
   </div>
