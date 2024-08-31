@@ -9,7 +9,7 @@
     <div class="profile-content">
         <div class="profile-card">
             <div class="profile-card-top">
-            <img src="/static/images/profile_icon.png" alt="profile-image" class="profile-card-image">
+            <img src="/static/images/profile.png" alt="profile-image" class="profile-card-image">
             <div class="profile-card-username">{{ user.username }}</div>
             </div>
             <a href="/user/edit">редактировать</a>
@@ -17,7 +17,7 @@
         <div class="profile-info">
             <div class="profile-info-top">
                 <div class="profile-info-top-name">
-                    <img src="/static/images/profile_icon.png" alt="profile-image" class="profile-info-image">
+                    <img src="/static/images/profile.png" alt="profile-image" class="profile-info-image">
                     <div class="profile-info-name">{{ user.get_full_name}}</div>
                 </div>
                 <a href="/companies" class="profile-info-company">{{ user.company.name }}</a>

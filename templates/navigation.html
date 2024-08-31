@@ -32,7 +32,7 @@
                 </button>
         </form>
     </li>
-    <li>
+    <!-- <li>
         <form action="/companies" method="GET">
                 <button
                     {% if request.path == '/companies' %}
@@ -43,8 +43,8 @@
                     Организации
                 </button>
         </form>
-    </li>
-    <li>
+    </li> -->
+    <!-- <li>
         <form action="/workers" method="GET">
                 <button
                     {% if request.path == '/workers' %}
@@ -55,6 +55,18 @@
                     Соотрудники
                 </button>
         </form>
+    </li> -->
+    <li>
+        <form action="/user/chat" method="GET">
+            <button
+                {% if request.path == '/user/chat' %}
+                    class="active"
+                {% endif %}
+                type="submit">
+                <img src="/static/images/chat.png" class="nav-icon">
+                Чат
+            </button>
+    </form>        
     </li>
     <li>
         <form action="/user/profile" method="GET">
@@ -64,7 +76,7 @@
                     {% endif %}
                     type="submit">
                     <img src="/static/images/profile.png" class="nav-icon">
-                    Albert Tiria
+                    {{ user }}
                 </button>
         </form>
     </li>
