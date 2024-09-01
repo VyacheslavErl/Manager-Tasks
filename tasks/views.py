@@ -8,8 +8,9 @@ from tasks.forms import TaskForm, CommentForm
 
 @login_required(login_url='/')
 def tasks_list(request):
+    tasks = TaskModel.objects.filter(company=request.user.company).order_by('do_before')
     return render(request, 'tasks_list.html',
-                  {'tasks': TaskModel.objects.all()})
+                  {'tasks': tasks})
 
 
 @login_required(login_url='/')
@@ -46,12 +47,24 @@ def task_info(request, task_id):
 
 
 @login_required(login_url='/')
+def calendar(request):
+    tasks = TaskModel.objects.filter(company=request.user.company).order_by('do_before')
+    dates = dict()
+    for task in tasks:
+        if dates.get(str(task.do_before)):
+            dates[str(task.do_before)].append(task)
+        else:
+            dates[str(task.do_before)] = [task]
+    return render(request, 'calendar.html',
+                  {'dates': dates})
+
+
+@login_required(login_url='/')
 def task_del(request, task_id):
-    user = UserModel.objects.get(id=id)
-    permission = user.job_title
-    if permission:
+    task = TaskModel.objects.get(id=task_id)
+    if request.user.company == task.company and request.user.job_title.add_task_permission:
         try:
-            TaskModel.objects.get(id=task_id).delete() # вношу изменения в этом декораторе
+            task.delete()
         except ObjectDoesNotExist:
             pass
         return redirect("/tasks")
