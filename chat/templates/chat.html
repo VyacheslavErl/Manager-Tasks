@@ -1,0 +1,117 @@
+<!-- {% extends "base.html" %}
+
+{% block title %}
+    Мессенджер
+{% endblock %} -->
+<link rel="stylesheet" href="../static/css/chat.css">
+
+<!--
+{% block content %}
+<div id="messenger">
+    <ul id="chat-list">
+        {% for chat in chats %}
+        <li class="chat">
+            <img src="{{ chat.profile_image }}">
+            <div class="info">
+                <p class="name">{{ chat.name }}</p>
+                <p class="last-message">{{ chat.last_message }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <div id="chat-panel">
+        <div id="chat-info">
+            <p class="name">{{ messages[0].sender_name }}</p>
+            <img src="путь до иконки пользователя">
+        </div>
+        <ul id="chat-history">
+            {% for message in messages %}
+            <li class="message {% if message.sender_name == 'имя текущего пользователя' %}current-user-message{% endif %}">
+                <img src="путь до иконки пользователя">
+                <div class="content">
+                    <p class="name">{{ message.sender_name }}</p>
+                    <p class="text">{{ message.text }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div> -->
+
+<div id="messenger">
+    <ul id="chat-list">
+        <li class="chat">
+            <img src="../../static/images/profile.png">
+            <div class="info">
+                <p class="name">Имя</p>
+                <p class="last-message">Здесь находится текст последнего сообщения</p>
+            </div>
+        </li>
+        <li class="chat current-user-message">
+            <img src="../../static/images/profile.png">
+            <div class="info">
+                <p class="name">Имя</p>
+                <p class="last-message">Здесь находится текст последнего сообщения</p>
+            </div>
+        </li>
+        <li class="chat active">
+            <img src="../../static/images/profile.png">
+            <div class="info">
+                <p class="name">Имя</p>
+                <p class="last-message">Здесь находится текст последнего сообщения</p>
+            </div>
+        </li>
+        <li class="chat">
+            <img src="../../static/images/profile.png">
+            <div class="info">
+                <p class="name">Имя</p>
+                <p class="last-message">Здесь находится текст последнего сообщения</p>
+            </div>
+        </li>
+    </ul>
+    <div id="chat-panel">
+        <div id="chat-info">
+            <p class="name">Имя Фамилия</p>
+            <img src="../../static/images/profile.png">
+        </div>
+        <ul id="chat-history">
+            <li class="message">
+                <img src="../../static/images/profile.png">
+                <div class="content">
+                    <p class="name">Имя Фамилия</p>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </li>
+            <li class="message">
+                <img src="../../static/images/profile.png">
+                <div class="content">
+                    <p class="name">Имя Фамилия</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </li>
+            <li class="message current-user-message">
+                <img src="../../static/images/profile.png">
+                <div class="content">
+                    <p class="name">Имя Фамилия</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </li>
+            <li class="message">
+                <img src="../../static/images/profile.png">
+                <div class="content">
+                    <p class="name">Имя Фамилия</p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </li>
+        </ul>
+        <div id="chat-input">
+            <div id="input">
+                <img src="../../static/images/papper-clip.png">
+                <input type="text" id="chat-input-text" placeholder="Введите текст сообщения...">
+            </div>
+            <button id="send-message">></button>
+        </div>
+    </div>
+</div>
+<!-- {% endblock %} -->
