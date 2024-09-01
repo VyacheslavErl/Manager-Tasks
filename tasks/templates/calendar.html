@@ -10,92 +10,18 @@
         <button>❮</button>
         <!-- <p id="year">2026</p> -->
         <ul id="days">
-            <li class="day">
-                <a class="date">26.02</a>
-                <ul class="daily-tasks">
-                    <li class="task priority4">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority3">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority2">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority1">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority0">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="day">
-                <a class="date">27.02</a>
-                <ul class="daily-tasks">
-                    <li class="task priority1">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="day">
-                <a class="date">28.02</a>
-                <ul class="daily-tasks">
-                    <li class="task priority2">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority0">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="day">
-                <a class="date">29.02</a>
-                <ul class="daily-tasks">
-                </ul>
-            </li>
-            <li class="day">
-                <a class="date">01.03</a>
-                <ul class="daily-tasks">
-                    <li class="task priority4">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="day">
-                <a class="date">02.03</a>
-                <ul class="daily-tasks">
-                    <li class="task priority4">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority2">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority2">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority1">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority1">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority1">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="day">
-                <a class="date">03.03</a>
-                <ul class="daily-tasks">
-                    <li class="task priority3">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                    <li class="task priority0">
-                        <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a>
-                    </li>
-                </ul>
-            </li>
+            {% for date, tasks in dates.items %}
+                <li class="day">
+                    <a class="date">{{ tasks.0.do_before }}</a>
+                    <ul class="daily-tasks">
+                        {% for task in tasks %}
+                            <li class="task priority4">
+                                <a>{{ task.name|truncatechars:57 }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
         </ul>
         <button>❯</button>
     </div>
