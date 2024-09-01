@@ -7,6 +7,9 @@
 #add-task .name input, #add-task .name textarea, #add-task .text input, #add-task .text textarea, #add-task .date input, #add-task .date textarea, #add-task .submit-btn input, #add-task .submit-btn textarea {
   font-size: 1.4375em;
 }
+#add-task .date {
+  font-size: 1em;
+}
 #add-task .image-input .image label div {
   font-size: 3rem;
   color: #000000;

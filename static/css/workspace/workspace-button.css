@@ -101,9 +101,14 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0px 20px;
     background: #ffffff;
     border-radius: 18px;
+  }
+  #add-task .name, #add-task .date, #add-task .submit-btn {
+    padding: 0px 20px;
+  }
+  #add-task .text {
+    padding: 20px;
   }
   #add-task .submit-btn {
     -ms-flex-item-align: end;
