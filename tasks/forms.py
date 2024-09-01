@@ -33,6 +33,7 @@ class TaskForm(ModelForm):
         if image.size > 1*1024*1024:
             self._errors["image"] = ErrorList(["Файл слишком большой. Размер не должен превышать 1 МБ."])
 
+
 class CommentForm(ModelForm):
     class Meta:
         model = CommentModel
