@@ -29,33 +29,7 @@
                         <span class="slogan">Взгляните в будущее с Manager Tasks!</span>
                     </div>
             </div>
-            {% if user.is_authenticated %}
-                <a class="continue-btn" href="/tasks">Перейти в рабочее пространсво</a>
-                {% else %}
-                    <div class="authorization">
-                        <div class="introduction">
-                            <p>Добро пожаловать!</p>
-                            <button class="signIn-btn" onclick="showLoginForm()">Войти</button>
-                            <button class="signUp-btn" onclick="showModal()">Присоедениться</button>
-                        </div>
-                        <div class="signIn">
-                            <form method="Post" action="" id="login" class="form">
-                                {% csrf_token %}
-                                <p>Вход</p>
-                                <div class="signIn-email" >
-                                    {{ login_form.username }}
-                                </div>
-                                <div class="signIn-password" >
-                                    {{ login_form.password }}
-                                    <span class="alert">{% for error in login_form.non_field_errors %} {{ error }} {% endfor %}</span>
-                                </div>
-                                <button type="submit" name="login" class="btn-signIn-success">Продолжить</button>
-                            </form>
-                            <button class="btn-return" onclick="hideLoginForm()">Назад</button>
-                        </div>
-                        <script src="/static/js/authorization.js"></script>
-                    </div>
-            {% endif %}
+            <a class="continue-btn" href="/tasks">Перейти в рабочее пространсво</a>
         </div>
         <div class="content">
             <div class="slogan">

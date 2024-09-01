@@ -7,7 +7,7 @@ from tasks.models import TaskModel, CommentModel
 class TaskForm(ModelForm):
     class Meta:
         model = TaskModel
-        fields = ['name', 'text', 'do_before', 'image']
+        fields = ['name', 'text', 'do_before', 'image', 'priority']
 
         widgets = {
             'name': TextInput(attrs={
@@ -30,8 +30,11 @@ class TaskForm(ModelForm):
 
     def clean(self):
         image = self.cleaned_data.get('image')
-        if image.size > 1*1024*1024:
-            self._errors["image"] = ErrorList(["Файл слишком большой. Размер не должен превышать 1 МБ."])
+        try:
+            if image.size > 1*1024*1024:
+                self._errors["image"] = ErrorList(["Файл слишком большой. Размер не должен превышать 1 МБ."])
+        except:
+            pass
 
 
 class CommentForm(ModelForm):
