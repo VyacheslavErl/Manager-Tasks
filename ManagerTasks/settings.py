@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'users',
     'companies',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ManagerTasks.wsgi.application'
 
+ASGI_APPLICATION = "chat.routing.application"
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': "channels.layers.InMemoryChannelLayer"
+        }
+    }
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
